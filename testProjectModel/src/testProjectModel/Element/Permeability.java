@@ -8,5 +8,5 @@ package testProjectModel.Element;
  *
  */
 public enum Permeability {
-Blocking, Creusable
+Blocking, Creusable, Passable
 }
