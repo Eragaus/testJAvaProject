@@ -9,9 +9,10 @@ package testProjectModel.map;
  */
 public class BoulderModel {
 	
-	private Map map;
-	private final int MAP_HEIGHT=3;
-	private final int MAP_WIDTH=3;
+	private IMap map;
+	private final int MAP_HEIGHT=9;
+	private final int MAP_WIDTH=5;
+	
 	
 	public BoulderModel()
 	{
@@ -19,11 +20,11 @@ public class BoulderModel {
 		
 	}
 	
-	public Map getMap() {
+	public IMap getMap() {
 		return this.map;
 	}
 
-	public void setMap(Map map) {
+	public void setMap(IMap map) {
 		this.map = map;
 	}
 

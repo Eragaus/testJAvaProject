@@ -4,24 +4,24 @@
 package testProjectModel.map;
 
 
-import testProjectModel.Element.Element;
+import testProjectModel.Element.IElement;
 import testProjectModel.MotionlessElement.MotionlessElementFactory;
 
 /**
  * @author Bryan
  *
  */
-public class Map {
+public class Map implements IMap {
 	
 	private int height;
 	private int width;
-	private Element[][] onTheMap;
+	private IElement[][] onTheMap;
 
 	public Map(int HEIGHT, int WIDTH) {
 		// TODO Auto-generated constructor stub
 		this.height=HEIGHT;
 		this.width=WIDTH;
-		this.onTheMap= new Element[this.height][this.width];
+		this.onTheMap= new IElement[this.height][this.width];
 		this.fillonTheMap();
 	}
 
@@ -44,27 +44,33 @@ public class Map {
 		}
 	}
 
+	
 	public int getHeight() {
 		return height;
 	}
 
+	
 	public void setHeight(int height) {
 		this.height = height;
 	}
 
+	
 	public int getWidth() {
 		return this.width;
 	}
 
+	
 	public void setWidth(int width) {
 		this.width = width;
 	}
 
-	public Element getOnTheMapXY(int x, int y) {
+	
+	public IElement getOnTheMapXY(int x, int y) {
 		return this.onTheMap[y][x];
 	}
 
-	public void setOnTheMapXY(Element element, int x, int y) {
+	
+	public void setOnTheMapXY(IElement element, int x, int y) {
 		this.onTheMap[y][x] = element;
 	}
 
